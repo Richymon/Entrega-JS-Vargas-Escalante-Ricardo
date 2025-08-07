@@ -1,7 +1,7 @@
 //Aviso al usuario
 function aviso() {
     console.log(`Se mostró el aviso inicial. Para abrir la función escribe "elegirDado()"`);
-    alert(`Para poder ver el historial de tus tiradas y movimientos, debes usar la consola (F12) y dar clic en "Consola". Si cierras la función de los dados, puedes volver a abrirla escribiendo en la consola "elegirDado()" (sin comillas y respetando mayúsculas).`);
+    alert(`Para poder ver el historial de sus tiradas y movimientos, debe usar la consola (F12) y dar clic en "Consola". Si cierra la función de los dados, puede volver a abrirla escribiendo en la consola "elegirDado()" (sin comillas y respetando mayúsculas).`);
 }
 
 //función del dado
@@ -19,8 +19,8 @@ function elegirDado() {
         console.log("¿Cuántos tipos de dados quiere tirar? Hay 6 tipos diferentes: 🎲4, 🎲6, 🎲8, 🎲10, 🎲12 y 🎲20 caras.");
         numTipos = prompt("¿Cuántos tipos de dados quiere tirar? Hay 6 tipos diferentes: 🎲4, 🎲6, 🎲8, 🎲10, 🎲12 y 🎲20 caras.");
         if (numTipos === null) {
-            console.log(`❌ Cancelo la tirada de dados. Para activarla de nuevo escriba en la consola "elegirDado()"`);
-            alert(`❌ Cancelo la tirada de dados. Para activarla de nuevo escriba en la consola "elegirDado()"`);
+            console.log(`❌ Canceló la tirada de dados. Para activarla de nuevo escriba en la consola "elegirDado()"`);
+            alert(`❌ Canceló la tirada de dados. Para activarla de nuevo escriba en la consola "elegirDado()"`);
             return;
         }
 
@@ -47,11 +47,11 @@ function elegirDado() {
 
         do {
             console.log("Elige el dado que quiera tirar. 🎲4, 🎲6, 🎲8, 🎲10, 🎲12, 🎲20.");
-            caras = prompt("Elige el dado que quieras tirar. 🎲4, 🎲6, 🎲8, 🎲10, 🎲12, 🎲20.");
+            caras = prompt("Elige el dado que quiera tirar. 🎲4, 🎲6, 🎲8, 🎲10, 🎲12, 🎲20.");
             //cancelar tirada de dados
             if (caras === null) {
-                console.log(`❌ Cancelo la tirada de dados. Para activarla de nuevo escriba en la consola "elegirDado()"`);
-                alert(`❌ Cancelo la tirada de dados. Para activarla de nuevo escriba en la consola "elegirDado()"`);
+                console.log(`❌ Canceló la tirada de dados. Para activarla de nuevo escriba en la consola "elegirDado()"`);
+                alert(`❌ Canceló la tirada de dados. Para activarla de nuevo escriba en la consola "elegirDado()"`);
                 return;
             }
 
@@ -76,8 +76,8 @@ function elegirDado() {
             numDados = prompt(`¿Cuántos dados d${caras} quiere tirar?`);
 
             if (numDados === null) {
-                console.log(`❌ Cancelo la tirada de dados. Para activarla de nuevo escriba en la consola "elegirDado()"`);
-                alert(`❌ Cancelo la tirada de dados. Para activarla de nuevo escriba en la consola "elegirDado()"`);
+                console.log(`❌ Canceló la tirada de dados. Para activarla de nuevo escriba en la consola "elegirDado()"`);
+                alert(`❌ Canceló la tirada de dados. Para activarla de nuevo escriba en la consola "elegirDado()"`);
                 return;
             }
 
@@ -100,9 +100,9 @@ function elegirDado() {
             tiradas.push(conclusion);
             suma += conclusion;
         }
-        resultados.push(`Tiro 🎲 ${numDados}d${caras}, Salió: ${tiradas.join(" - ")}`);
+        resultados.push(`Tiró 🎲 ${numDados}d${caras}, Salió: ${tiradas.join(" - ")}`);
         resumen.push(...tiradas);
-        console.log(`Tiro 🎲 ${numDados}d${caras}, Salió: ${tiradas.join(" - ")}`);
+        console.log(`Tiró 🎲 ${numDados}d${caras}, Salió: ${tiradas.join(" - ")}`);
     }
     //mostrar el resultado final
     console.log(`Resumen de la Tirada 📜\n${resultados.join("\n")}\n -Suma total: ${suma}`);
@@ -114,8 +114,8 @@ function elegirDado() {
         console.log(`Ha decidido hacer otra tirada.`);
         elegirDado();
     } else {
-        console.log(`❌ Cancelo la tirada de dados. Para activarla de nuevo escriba en la consola "elegirDado()"`);
-        alert(`❌ Cancelo la tirada de dados. Para activarla de nuevo escriba en la consola "elegirDado()"`);
+        console.log(`❌ Canceló la tirada de dados. Para activarla de nuevo escriba en la consola "elegirDado()"`);
+        alert(`❌ Canceló la tirada de dados. Para activarla de nuevo escriba en la consola "elegirDado()"`);
     }
 }
 
