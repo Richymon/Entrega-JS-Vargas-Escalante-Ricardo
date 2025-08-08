@@ -1,7 +1,7 @@
 //Aviso al usuario
 function aviso() {
     console.log(`Se mostró el aviso inicial. Para abrir la función escribe "elegirDado()"`);
-    alert(`Para poder ver el historial de sus tiradas y movimientos, debe usar la consola (F12) y dar clic en "Consola". Si cierra la función de los dados, puede volver a abrirla escribiendo en la consola "elegirDado()" (sin comillas y respetando mayúsculas).`);
+    alert(`IMPORTANTE: Para poder ver el historial de sus tiradas y movimientos, debe usar la consola pulsando F12 (o bien dando clic derecho e inspeccionar) y seleccionar la pestaña "Consola". Si se llega a cerrar la función de los dados, puede volver a abrirla escribiendo en la consola "elegirDado()" (sin comillas y respetando mayúsculas).`);
 }
 
 //función del dado
@@ -25,13 +25,17 @@ function elegirDado() {
         }
 
         numTipos = parseInt(numTipos); //convierte el string en number
-
+        
         if (isNaN(numTipos) || numTipos < 1 || numTipos > 6) {
             console.log("❌ Valor inválido. Solo se aceptan números del 1 al 6.");
             alert("❌ Valor inválido. Solo se aceptan números del 1 al 6.");
         }
     }
     while (isNaN(numTipos) || numTipos < 1 || numTipos > 6);
+    if (numTipos > 2) {
+        console.log(`Alerta: Las siguientes preguntas se repetirán ${numTipos} veces.`);
+        alert(`Alerta: Las siguientes preguntas se repetirán ${numTipos} veces. No es un error. Podrá ver los resultados de cada uno de los dados en la consola. El total aparecerá una vez que termine el bucle de preguntas.`);
+    }
 
     //Guía en la consola
     console.log(`Quiere tirar ${numTipos} tipos de dados 🎲`);
@@ -72,8 +76,8 @@ function elegirDado() {
         let numDados;
 
         do {
-            console.log(`¿Cuántos dados d${caras} quiere tirar?`);
-            numDados = prompt(`¿Cuántos dados d${caras} quiere tirar?`);
+            console.log(`¿Cuántos dados 🎲d${caras} quiere tirar?`);
+            numDados = prompt(`¿Cuántos dados 🎲d${caras} quiere tirar?`);
 
             if (numDados === null) {
                 console.log(`❌ Canceló la tirada de dados. Para activarla de nuevo escriba en la consola "elegirDado()"`);
