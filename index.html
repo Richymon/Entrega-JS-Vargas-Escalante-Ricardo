@@ -2,24 +2,38 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dados</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dados</title>
 </head>
 
 <body>
-    <p>Una aplicación que te permite tirar dados.</p>
-    <br>
-    <p>Los dados que aceptados son de 4, 6, 8, 10, 12 y 20 caras.</p>
-    <br>
-    <p>Estos se representan con una “d” de dado. Por ejemplo, si tiras 3 dados de 6 caras, se representa así:
-        <strong>3d6</strong>.</p>
-    <br>
-    <p>Nota: Para volver a usar la función de dados, abre la consola presionando <strong>F12</strong>, haz clic en la pestaña
-        “Consola” y escribe <code>elegirDado()</code>.</p>
+  <h1>🎲 Tiradas de Dados</h1>
+  <!--Cuantos dados-->
+  <label for="cantidad">Cantidad de dados:</label>
+  <input type="number" id="cantidad" min="1" value="1">
+  <!--Tipo de dado-->
+  <button id="btn-d4">Tirar d4</button>
+  <button id="btn-d6">Tirar d6</button>
+  <button id="btn-d8">Tirar d8</button>
+  <button id="btn-d10">Tirar d10</button>
+  <button id="btn-d12">Tirar d12</button>
+  <button id="btn-d20">Tirar d20</button>
+  <!--Resultado-->
+  <h3>🎯 Resultado:</h3>
+  <div id="resultado">
+    <p id="texto-resultado">Haz una tirada...</p>
+  </div>
 
-    <!--link a javascript-->
-    <script src="./funcionDados/dados.js"></script>
+  <!--Lipiar Historial-->
+  <div>
+    <button id="btn-limpiar">🧹 Limpiar historial</button>
+  </div>
+
+  <!--Historial-->
+  <div id="historial"></div>
+  <!-- Archivo JS -->
+  <script src="app.js"></script>
 </body>
 
 </html>

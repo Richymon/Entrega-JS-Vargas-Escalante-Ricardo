@@ -25,7 +25,7 @@ function elegirDado() {
         }
 
         numTipos = parseInt(numTipos); //convierte el string en number
-        
+
         if (isNaN(numTipos) || numTipos < 1 || numTipos > 6) {
             console.log("❌ Valor inválido. Solo se aceptan números del 1 al 6.");
             alert("❌ Valor inválido. Solo se aceptan números del 1 al 6.");
@@ -36,6 +36,7 @@ function elegirDado() {
         console.log(`Alerta: Las siguientes preguntas se repetirán ${numTipos} veces.`);
         alert(`Alerta: Las siguientes preguntas se repetirán ${numTipos} veces. No es un error. Podrá ver los resultados de cada uno de los dados en la consola. El total aparecerá una vez que termine el bucle de preguntas.`);
     }
+
 
     //Guía en la consola
     console.log(`Quiere tirar ${numTipos} tipos de dados 🎲`);
@@ -121,10 +122,11 @@ function elegirDado() {
         console.log(`❌ Canceló la tirada de dados. Para activarla de nuevo escriba en la consola "elegirDado()"`);
         alert(`❌ Canceló la tirada de dados. Para activarla de nuevo escriba en la consola "elegirDado()"`);
     }
-}
 
-//LLamar al cargar la página
-window.onload = function () {
-    aviso();
-    elegirDado();
-};
+
+    //LLamar al cargar la página
+    window.onload = function () {
+        aviso();
+        elegirDado();
+    };
+}
